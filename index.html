@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayBreak Jail</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>PLAYBREAK</h1>
+    <p>CS 1.6 Jail Server</p>
+</header>
+
+<nav>
+    <div class="menu">
+
+        <div class="left-menu">
+            <a href="#">Главная</a>
+
+            <div class="dropdown">
+                <a href="#">Магазин ▾</a>
+                <div class="dropdown-content">
+                    <a href="#donate">Магазин привилегий</a>
+                    <a href="#">Магазин моделей</a>
+                </div>
+            </div>
+
+            <a href="#rules">Правила</a>
+            <a href="#games">Игры</a>
+        </div>
+
+        <div class="right-menu">
+            <a href="#register" class="register-btn">Зарегистрироваться</a>
+        </div>
+
+    </div>
+</nav>
+
+<section id="donate">
+    <h2>Магазин привилегий</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>VIP</h3>
+            <p>500₸</p>
+            <button onclick="pay('VIP', 500)">Купить</button>
+        </div>
+
+        <div class="card">
+            <h3>ADMIN</h3>
+            <p>1500₸</p>
+            <button onclick="pay('ADMIN', 1500)">Купить</button>
+        </div>
+
+        <div class="card">
+            <h3>SUPER ADMIN</h3>
+            <p>2500₸</p>
+            <button onclick="pay('SUPER ADMIN', 2500)">Купить</button>
+        </div>
+    </div>
+</section>
+
+<section id="rules">
+    <h2>Правила сервера</h2>
+
+    <div class="rules-grid">
+        <div class="rule-box">Правила хука</div>
+        <div class="rule-box">Правила граба</div>
+        <div class="rule-box">Общие правила</div>
+        <div class="rule-box">Правила охраны</div>
+        <div class="rule-box">Правила Саймона</div>
+        <div class="rule-box">Правила привилегированных</div>
+    </div>
+</section>
+
+<section id="games">
+    <h2>Игры для Саймона</h2>
+    <ul>
+        <li>Царь горы</li>
+        <li>Русская рулетка</li>
+        <li>Прятки</li>
+        <li>Гонки</li>
+    </ul>
+</section>
+
+<section id="register">
+    <h2>Регистрация</h2>
+
+    <div class="form-box">
+        <input type="text" placeholder="Ваш ник">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Пароль">
+        <button>Создать аккаунт</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 PlayBreak</p>
+</footer>
+
+<script>
+function pay(type, price) {
+    const phone = "77053349795";
+
+    navigator.clipboard.writeText(phone);
+
+    alert(
+        "Привилегия: " + type + "\n" +
+        "Цена: " + price + "₸\n\n" +
+        "Номер скопирован: " + phone + "\n\n" +
+        "Открой Kaspi → Перевод → вставь номер\n" +
+        "Комментарий: ник + " + type
+    );
+}
+</script>
+
+</body>
+</html>
